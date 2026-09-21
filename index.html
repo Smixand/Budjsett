@@ -13,7 +13,7 @@
             <input placeholder="Navn" id="inputinntektnavn">
             <input placeholder="Penger" id="inputinntektpenger">
             <button onclick="leggtilinntekt()">Legg til</button>
-            <div id="lister">
+            <div class="lister">
                 <ul id="listinntekt"></ul>
                 <ul id="listinntektpenger"></ul>
             </div>
@@ -24,10 +24,14 @@
             <input placeholder="Navn" id="inpututgiftnavn">
             <input placeholder="Penger" id="inpututgiftpenger">
             <button onclick="leggtilutgift()">Legg til</button>
+            <div class="lister">
+                <ul id="listutgift"></ul>
+                <ul id="listutgiftpenger"></ul>
+            </div>
         </div>
     </div>
 
-    <h1>Saldo: <span>0</span> kr</h1>
+    <h1>Saldo: <spa id="saldo">0</span> kr</h1>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
-let inntekt = []
-let inntektpenger = []
-let utgift = []
-let utgiftpenger = []
+let saldopenger = 0
+let inntektpenger = 0
+let utgiftpenger = 0
 
 const inputinntektnavn = document.getElementById("inputinntektnavn")
 const inputinntektpenger = document.getElementById("inputinntektpenger")
@@ -12,22 +11,38 @@ const inpututgiftpenger = document.getElementById("inpututgiftpenger")
 const listinntekt = document.getElementById("listinntekt")
 const listinntektpenger = document.getElementById("listinntektpenger")
 
+const listutgift = document.getElementById("listutgift")
+const listutgiftpenger = document.getElementById("listutgiftpenger")
+
+const saldo = document.getElementById("saldo")
+
 function leggtilinntekt(){
-    inntekt.push(inputinntektnavn.value)
-    inntektpenger.push(inputinntektpenger.value)   
-     
+    inntektpenger = inntektpenger + Number(inputinntektpenger.value);
+
     const li = document.createElement("li");
     li.textContent = inputinntektnavn.value
     listinntekt.appendChild(li);
 
-    const lito = document.createElement("lito");
+    const lito = document.createElement("li");
     lito.textContent = inputinntektpenger.value
     listinntektpenger.appendChild(lito);
+
+    saldopenger = inntektpenger - utgiftpenger;
+    saldo.textContent = saldopenger;
 }
 
 function leggtilutgift(){
-    utgift.push(inpututgiftnavn.value)
-    utgiftpenger.push(inpututgiftpenger.value)
+    utgiftpenger = utgiftpenger + Number(inpututgiftpenger.value);
     
+    const litre = document.createElement("li");
+    litre.textContent = inpututgiftnavn.value
+    listutgift.appendChild(litre);
+
+    const lifire = document.createElement("li");
+    lifire.textContent = inpututgiftpenger.value
+    listutgiftpenger.appendChild(lifire);
+
+    saldopenger = inntektpenger - utgiftpenger;
+    saldo.textContent = saldopenger;
 }
 
