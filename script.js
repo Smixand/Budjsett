@@ -17,7 +17,7 @@ const listutgiftpenger = document.getElementById("listutgiftpenger")
 const saldo = document.getElementById("saldo")
 
 function leggtilinntekt(){
-    inntektpenger = inntektpenger + Number(inputinntektpenger.value);
+    inntektpenger = inntektpenger + Number(inputinntektpenger.value);   
 
     const li = document.createElement("li");
     li.textContent = inputinntektnavn.value
@@ -29,6 +29,13 @@ function leggtilinntekt(){
 
     saldopenger = inntektpenger - utgiftpenger;
     saldo.textContent = saldopenger;
+
+    if(saldopenger<0){
+        saldo.style.color = "red";
+    }
+
+    inputinntektpenger.value = "";
+    inputinntektnavn.value = "";
 }
 
 function leggtilutgift(){
@@ -44,5 +51,12 @@ function leggtilutgift(){
 
     saldopenger = inntektpenger - utgiftpenger;
     saldo.textContent = saldopenger;
+
+    if(saldopenger<0){
+        saldo.style.color = "red";
+    }
+
+    inpututgiftnavn.value = "";
+    inpututgiftpenger.value = "";
 }
 

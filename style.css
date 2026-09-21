@@ -19,3 +19,7 @@ width: 30%;
     display:flex;
     overflow: auto;
 }
+
+h1{
+    text-align: center;
+}
