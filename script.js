@@ -36,6 +36,13 @@ function leggtilinntekt(){
 
     inputinntektpenger.value = "";
     inputinntektnavn.value = "";
+
+    if(saldopenger<0){
+        saldo.style.color = "red";
+    }
+    else{
+        saldo.style.color = "#08d13e"
+    }
 }
 
 function leggtilutgift(){
@@ -54,6 +61,9 @@ function leggtilutgift(){
 
     if(saldopenger<0){
         saldo.style.color = "red";
+    }
+    else{
+        saldo.style.color = "#08d13e"
     }
 
     inpututgiftnavn.value = "";
