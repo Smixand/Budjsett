@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budsjettkalkulator</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="header"><h1>Kalkulator budzeta</h1></div>
+    <nav><a href="index.html">Glavna</a><a onclick="window.print()">Stampaj</a><a href="innstillinger.html">Podesavanja</a></nav>
+    <div id="kalk">
+        <div id="inntekter">
+            <h2>Zarada</h2>
+            <input placeholder="Zarada..." id="inputinntektnavn">
+            <input placeholder="Vrednost (RSD)" id="inputinntektpenger">
+            <button onclick="leggtilinntekt()">Dodaj</button>
+            <div class="lister">
+                <ul id="listinntekt"></ul>
+                <ul id="listinntektpenger"></ul>
+            </div>
+            
+        </div>
+        <div id="utgifter">
+            <h2>Troskovi</h2>
+            <input placeholder="Trosak..." id="inpututgiftnavn">
+            <input placeholder="Vrednost (RSD)" id="inpututgiftpenger">
+            <button onclick="leggtilutgift()">Dodaj</button>
+            <div class="lister">
+                <ul id="listutgift"></ul>
+                <ul id="listutgiftpenger"></ul>
+            </div>
+        </div>
+    </div>
+
+    <h2>Ostatak pare na kraju meseca: <span id="saldo">0</span> dinara</h2>
+    <script src="../script.js"></script>
+</body>
+</html>

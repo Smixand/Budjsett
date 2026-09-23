@@ -1,3 +1,35 @@
+html, body{
+    margin:0;
+    padding:0;
+}
+
+#header{
+    background-color: rgb(45, 56, 255);
+    color:white;
+    display: flex;
+justify-content: center;}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:gainsboro;
+    cursor:pointer;
+}
+
+nav{
+    background-color: rgb(45, 56, 255);
+    margin-bottom: 5%;
+    color:white;
+    font-size: xx-large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    gap: 2%;
+    border-top:1px solid white;
+}
+
 #kalk{
     width: 70%;
     margin-left:15%;
@@ -20,7 +52,53 @@ width: 30%;
     overflow: auto;
 }
 
-h1, h2, h3{
+img{
+    width: 10rem;
+    height: 7rem;
+}
+
+.innstillingertekst{
+    text-align: left;
+}
+
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2, h3{
     text-align: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+@media (max-width: 600px) {
+  #kalk{
+    flex-direction: column;
+  }
+
+  #inntekter, #utgifter{
+    width: 100% ;
+    border: 1px solid black;
+}
+    button{
+        margin-left:10%;
+        width: 80%;
+    }
+    input{
+        width:98%;
+    }
+
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    h2 {
+        visibility: visible;
+    }
+
+    ul, li, span{
+        visibility: visible;
+    }
+    }

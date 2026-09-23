@@ -30,10 +30,6 @@ function leggtilinntekt(){
     saldopenger = inntektpenger - utgiftpenger;
     saldo.textContent = saldopenger;
 
-    if(saldopenger<0){
-        saldo.style.color = "red";
-    }
-
     inputinntektpenger.value = "";
     inputinntektnavn.value = "";
 
