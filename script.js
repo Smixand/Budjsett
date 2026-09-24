@@ -4,7 +4,7 @@ let utgiftpenger = 0
 
 const header = document.getElementById("header")
 const navigation = document.querySelector("nav")
-const inntekt = document.getElementById("inntekter")
+const inntekter = document.getElementById("inntekter")
 const utgifter = document.getElementById("utgifter")
 
 
@@ -23,19 +23,23 @@ const listutgiftpenger = document.getElementById("listutgiftpenger")
 const saldo = document.getElementById("saldo")
 
 function light(){
+    localStorage.setItem("theme", "light");
     header.style.backgroundColor = "rgb(45, 56, 255)";
     navigation.style.backgroundColor = "rgb(45, 56, 255)";
     document.body.style.backgroundColor = "rgb(255, 255, 255)"
+    inntekter.style.border = "1px solid black";
+    utgifter.style.border = "1px solid black";
     document.body.style.color = "black";
-    localStorage.setItem("theme", "light");
 }
 
 function dark(){
+    localStorage.setItem("theme", "dark");
     header.style.backgroundColor = "rgb(96, 96, 96)";
     navigation.style.backgroundColor = "rgb(96, 96, 96)";
     document.body.style.backgroundColor = "rgb(46, 46, 46)"
     document.body.style.color = "white";
-    localStorage.setItem("theme", "dark");
+    inntekter.style.border = "1px solid white";
+    utgifter.style.border = "1px solid white";
 }
 
 const theme = localStorage.getItem("theme")
