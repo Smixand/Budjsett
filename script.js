@@ -2,6 +2,12 @@ let saldopenger = 0
 let inntektpenger = 0
 let utgiftpenger = 0
 
+const header = document.getElementById("header")
+const navigation = document.querySelector("nav")
+const inntekt = document.getElementById("inntekter")
+const utgifter = document.getElementById("utgifter")
+
+
 const inputinntektnavn = document.getElementById("inputinntektnavn")
 const inputinntektpenger = document.getElementById("inputinntektpenger")
 
@@ -15,6 +21,31 @@ const listutgift = document.getElementById("listutgift")
 const listutgiftpenger = document.getElementById("listutgiftpenger")
 
 const saldo = document.getElementById("saldo")
+
+function light(){
+    header.style.backgroundColor = "rgb(45, 56, 255)";
+    navigation.style.backgroundColor = "rgb(45, 56, 255)";
+    document.body.style.backgroundColor = "rgb(255, 255, 255)"
+    document.body.style.color = "black";
+    localStorage.setItem("theme", "light");
+}
+
+function dark(){
+    header.style.backgroundColor = "rgb(96, 96, 96)";
+    navigation.style.backgroundColor = "rgb(96, 96, 96)";
+    document.body.style.backgroundColor = "rgb(46, 46, 46)"
+    document.body.style.color = "white";
+    localStorage.setItem("theme", "dark");
+}
+
+const theme = localStorage.getItem("theme")
+if(theme=="light"){
+    light()
+}
+
+if(theme=="dark"){
+    dark()
+}
 
 function leggtilinntekt(){
     inntektpenger = inntektpenger + Number(inputinntektpenger.value);   

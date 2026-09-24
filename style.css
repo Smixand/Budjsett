@@ -52,11 +52,19 @@ width: 30%;
     overflow: auto;
 }
 
+input{
+    width: 33%;
+    box-sizing: border-box;
+}
+
 img{
     width: 10rem;
     height: 7rem;
 }
 
+button{
+    width: 32%;
+}
 .innstillingertekst{
     text-align: left;
 }
@@ -84,14 +92,18 @@ h2, h3{
         width: 80%;
     }
     input{
-        width:98%;
+        width:100%;
     }
 
+    nav{
+        font-size: x-large;
+    }
 }
 
 @media print {
     body * {
         visibility: hidden;
+        color:Black;
     }
 
     h2 {
