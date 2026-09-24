@@ -27,9 +27,9 @@ function light(){
     header.style.backgroundColor = "rgb(45, 56, 255)";
     navigation.style.backgroundColor = "rgb(45, 56, 255)";
     document.body.style.backgroundColor = "rgb(255, 255, 255)"
+    document.body.style.color = "black";
     inntekter.style.border = "1px solid black";
     utgifter.style.border = "1px solid black";
-    document.body.style.color = "black";
 }
 
 function dark(){
