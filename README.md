@@ -1,3 +1,3 @@
-Jeg har laget en enkel budsjettkalkulator gjennom Javascript. Den fungerer ved å legge til alle inntektene/utgiftene i en <ul> som er vist til brukeren. Selve pengene går inn i en av to variabler: utgifter eller inntekter også saldoen blir regnet ut gjennom inntekt minus utgift.
+Jeg har laget en enkel budsjettkalkulator gjennom Javascript. Den fungerer ved å legge til alle inntektene/utgiftene i en < ul > som er vist til brukeren. Selve pengene går inn i en av to variabler: utgifter eller inntekter også saldoen blir regnet ut gjennom inntekt minus utgift.
 
 Etter det la jeg til innstillinger hvor man kan bytte språk og bytte fargene på nettsiden. Jeg fiksa også at siden skulle være responsiv og at man kan printe ut all informasjonen.
